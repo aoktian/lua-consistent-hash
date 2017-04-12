@@ -101,11 +101,11 @@ local function chash_get_upstream(key)
 end
 M.get_upstream = chash_get_upstream
 
-local function chash_add_upstream(upstream, weigth)
+local function chash_add_upstream(upstream, weights)
 	M.initialized = false
 
-	weight = weight or 1
-	table.insert(HASH_PEERS, {weight, upstream})
+	weights = weights or 1
+	table.insert(HASH_PEERS, {weights, upstream})
 end
 M.add_upstream = chash_add_upstream
 
